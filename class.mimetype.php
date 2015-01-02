@@ -44,8 +44,7 @@
 			'video'=>array(
 				'mp4'=>array('mp4','m4v','m1v','m2v'),
 				'ogg'=>array('ogv'),
-				'webm'=>array('webm'),
-				
+				'webm'=>array('webm')
 			)
 		);
 		
@@ -104,6 +103,11 @@
 							$exts[] = $mime . '/' . $type;
 						}
 					}
+				}
+				
+				if(!$exts)
+				{
+					$exts=array( self::$default );
 				}
 			}
 			
