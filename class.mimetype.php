@@ -128,9 +128,9 @@
 			{
 				return array(); //self::$cache['mime'][$mime];
 			}
-			else if( !self::$mimes[$mime_c[0]])
+			else if( self::$mimes[$mime_c[0]] )
 			{
-				return self::$mimes[$mime_c[0]];
+				return self::$mimes[$mime_c[0]][$mime_c[1]];
 			}
 			else
 			{
